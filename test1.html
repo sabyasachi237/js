@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patient Registration</title>
+  <link rel="stylesheet" href="default.css" />
+  <link rel="stylesheet" href="default.date.css" />
+</head>
+
+<body>
+  <div class="container">
+    <form action="#" method="post" id="registration-form">
+      <!-- Step 1 - Personal Information -->
+      <div class="step" id="step1">
+        <h3>Step 1 - Personal Information</h3>
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" required />
+        <br /><br />
+        <label for="middle_name">Middle Name:</label>
+        <input type="text" name="middle_name" required />
+        <br /><br />
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" required />
+        <br /><br />
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob" class="datepicker" required />
+        <br /><br />
+        <button type="button" class="next-step" style="width: 100%">
+          Next
+        </button>
+      </div>
+
+      <!-- Step 2 - Address Information -->
+      <div class="step" id="step2" style="display: none;">
+        <h3>Step 2 - Address Information</h3>
+        <label for="address_line1">Address Line 1:</label>
+        <input type="text" name="address_line1" required />
+        <br /><br />
+        <label for="address_line2">Address Line 2:</label>
+        <input type="text" name="address_line2" />
+        <br /><br />
+        <label for="city">City:</label>
+        <input type="text" name="city" required />
+        <br /><br />
+        <label for="state">State:</label>
+        <input type="text" name="state" required />
+        <br /><br />
+        <label for="zip">Zip:</label>
+        <input type="text" name="zip" required />
+        <br /><br />
+        <label for="cell_phone">Cell Phone:</label>
+        <input type="tel" name="cell_phone" required />
+        <br /><br />
+        <label for="email">Email:</label>
+        <input type="email" name="email" required />
+        <br /><br />
+        <button type="button" class="prev-step">Previous</button>
+        <button type="button" class="next-step" style="width: 100%">
+          Next
+        </button>
+      </div>
+
+      <!-- Step 3 - Ethnicity and Race -->
+      <div class="step" id="step3" style="display: none;">
+        <h3>Step 3 - Ethnicity and Race</h3>
+        <label for="ethnicity">Ethnicity:</label>
+        <select name="ethnicity" required>
+          <option value="">Select Ethnicity</option>
+          <option value="hispanic">Hispanic</option>
+          <option value="non_hispanic">Non-Hispanic</option>
+        </select>
+        <br /><br />
+        <label for="race">Race:</label>
+        <select name="race" required>
+          <option value="">Select Race</option>
+          <option value="white">White</option>
+          <option value="black">Black</option>
+          <option value="asian">Asian</option>
+          <option value="native_american">Native American</option>
+          <option value="other">Other</option>
+        </select>
+        <br /><br />
+        <button type="button" class="prev-step">Previous</button>
+        <button type="button" class="next-step" style="width: 100%">
+          Next
+        </button>
+      </div>
+
+      <!-- Step 4 - ID Front Photo and ID Back Photo -->
+      <div class="step" id="step4" style="display: none;">
+        <h3>Step 4 - ID Front Photo and ID Back Photo</h3>
+        <label for="id_front_photo">ID Front Photo:</label>
+        <input type="file" name="id_front_photo" accept="image/*" required />
+        <br /><br />
+        <label for="id_back_photo">ID Back Photo:</label>
+        <input type="file" name="id_back_photo" accept="image/*" required />
+        <br /><br />
+        <button type="button" class="prev-step">Previous</button>
+        <button type="button" class="next-step" style="width: 100%">
+          Next
+        </button>
+      </div>
+
+      <!-- Step 5 - Insurance Front Photo and Insurance Back Photo -->
+      <div class="step" id="step5" style="display: none;">
+        <h3>Step 5 - Insurance Front Photo and Insurance Back Photo</h3>
+        <label for="insurance_front_photo">Insurance Front Photo:</label>
+        <input type="file" name="insurance_front_photo" accept="image/*" required />
+        <br /><br />
+        <label for="insurance_back_photo">Insurance Back Photo:</label>
+        <input type="file" name="insurance_back_photo" accept="image/*" required />
+        <br /><br />
+        <button type="button" class="prev-step">Previous</button>
+        <button type="button" class="next-step" style="width: 100%">
+          Next
+        </button>
+      </div>
+
+      <!-- Step 6 - Terms & Conditions -->
+      <div class="step" id="step6" style="display: none;">
+        <h3>Step 6 - Terms & Conditions</h3>
+        <div style="text-align: left; margin-top: 20px">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            nec mauris urna. Proin aliquet nulla eu ligula feugiat, ac
+            bibendum turpis venenatis. Sed ac ligula quis arcu suscipit
+            auctor.
+          </p>
+        </div>
+        <button onclick="openSignaturePopup()" class="next-step">
+          Sign
+        </button>
+
+        <!-- Hidden signature popup -->
+        <div id="signature-popup" style="display: none;">
+          <div
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background: white;
+              padding: 20px;
+              width: 80%;
+              max-width: 400px;
+            "
+          >
+            <h3 style="text-align: center; color: #333">Sign Here</h3>
+            <canvas id="signature-canvas" width="400" height="200"></canvas>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+              "
+            >
+              <button id="cancel-button" onclick="closeSignaturePopup()">
+                Cancel
+              </button>
+              <p>Please sign above.</p>
+              <button id="done-button" class="next-step">Done</button>
+            </div>
+          </div>
+        </div>
+
+        <form action="registration.php" method="post">
+          <input type="hidden" id="signature-data" name="signature-data" />
+          <button type="button" class="prev-step">Previous</button>
+          <input type="submit" value="Next" style="display: none" />
+        </form>
+
+        <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+        <script>
+          var signaturePad = new SignaturePad(
+            document.getElementById("signature-canvas")
+          );
+
+          function openSignaturePopup() {
+            document.getElementById("signature-popup").style.display = "block";
+          }
+
+          function closeSignaturePopup() {
+            document.getElementById("signature-popup").style.display = "none";
+          }
+
+          // Handle Clear button click
+          document.getElementById("cancel-button").addEventListener("click", function () {
+            signaturePad.clear();
+          });
+
+          // Handle form submission
+          document.getElementById("done-button").addEventListener("click", function () {
+            // Get the signature data as a base64-encoded PNG image
+            var signatureData = signaturePad.toDataURL();
+
+            // Set the value of the hidden input to the signature data
+            document.getElementById("signature-data").value = signatureData;
+
+            // Submit the form
+            document.querySelector("form").submit();
+          });
+        </script>
+      </div>
+
+      <!-- Step 7 - Additional Information -->
+      <div class="step" id="step7" style="display: none;">
+        <h3>Step 7 - Additional Information</h3>
+        <div style="text-align: left; margin-top: 20px">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            nec mauris urna. Proin aliquet nulla eu ligula feugiat, ac
+            bibendum turpis venenatis. Sed ac ligula quis arcu suscipit
+            auctor.
+          </p>
+        </div>
+        <button onclick="openSignaturePopup()" class="next-step">
+          Sign
+        </button>
+
+        <!-- Hidden signature popup -->
+        <div id="signature-popup" style="display: none;">
+          <div
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background: white;
+              padding: 20px;
+              width: 80%;
+              max-width: 400px;
+            "
+          >
+            <h3 style="text-align: center; color: #333">Sign Here</h3>
+            <canvas id="signature-canvas" width="400" height="200"></canvas>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+              "
+            >
+              <button id="cancel-button" onclick="closeSignaturePopup()">
+                Cancel
+              </button>
+              <p>Please sign above.</p>
+              <button id="done-button" class="next-step">Done</button>
+            </div>
+          </div>
+        </div>
+
+        <form action="registration.php" method="post">
+          <input type="hidden" id="signature-data" name="signature-data" />
+          <button type="button" class="prev-step">Previous</button>
+          <input type="submit" value="Next" style="display: none" />
+        </form>
+
+        <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+        <script>
+          var signaturePad = new SignaturePad(
+            document.getElementById("signature-canvas")
+          );
+
+          function openSignaturePopup() {
+            document.getElementById("signature-popup").style.display = "block";
+          }
+
+          function closeSignaturePopup() {
+            document.getElementById("signature-popup").style.display = "none";
+          }
+
+          // Handle Clear button click
+          document.getElementById("cancel-button").addEventListener("click", function () {
+            signaturePad.clear();
+          });
+
+          // Handle form submission
+          document.getElementById("done-button").addEventListener("click", function () {
+            // Get the signature data as a base64-encoded PNG image
+            var signatureData = signaturePad.toDataURL();
+
+            // Set the value of the hidden input to the signature data
+            document.getElementById("signature-data").value = signatureData;
+
+            // Submit the form
+            document.querySelector("form").submit();
+          });
+        </script>
+      </div>
+
+      <!-- Step 8 - Registration Complete -->
+      <div class="step" id="step8" style="display: none;">
+        <h3>Step 8 - Registration Complete</h3>
+        <p>Thank You for registering!</p>
+        <button type="button" class="prev-step">Previous</button>
+      </div>
+
+      <!-- Step Counter -->
+      <div style="text-align: center;">
+        <span id="step-counter">Step 1 of 8</span>
+      </div>
+    </form>
+  </div>
+
+  <!-- Your JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="picker.js"></script>
+  <script src="picker.date.js"></script>
+
+  <script>
+    var currentStep = 1;
+    var totalSteps = 8;
+
+    $(document).ready(function () {
+      $(".next-step").click(function () {
+        if (currentStep < totalSteps) {
+          $("#step" + currentStep).hide();
+          currentStep++;
+          $("#step" + currentStep).show();
+          updateStepCounter();
+        }
+      });
+
+      $(".prev-step").click(function () {
+        if (currentStep > 1) {
+          $("#step" + currentStep).hide();
+          currentStep--;
+          $("#step" + currentStep).show();
+          updateStepCounter();
+        }
+      });
+
+      function updateStepCounter() {
+        $("#step-counter").text("Step " + currentStep + " of " + totalSteps);
+      }
+    });
+    $(".datepicker").pickadate({
+      formatSubmit: "yyyy/mm/dd",
+      hiddenName: true,
+    });
+  </script>
+</body>
+</html>
