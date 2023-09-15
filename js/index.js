@@ -115,57 +115,16 @@ const fileInputStep5 = document.getElementById('image-input-step5');
 fileInputStep5.addEventListener('change', function (event) {
   handleImageUploadStep5(event);
 });
-var signaturePad = new SignaturePad(document.getElementById('signature-canvas'));
 
-function openSignaturePopup() {
-document.getElementById('signature-popup').style.display = 'block';
-}
+// Add an event listener to the "Submit" button
+document.getElementById('continue-button').addEventListener('click', function () {
+  // Perform any necessary validation here before proceeding to Step 11
 
-function closeSignaturePopup() {
-document.getElementById('signature-popup').style.display = 'none';
-}
+  // Assuming validation is successful, you can submit the form or navigate to "Step 11" here
+  // For example, you can submit the form using JavaScript:
+  document.getElementById('step10-form').submit();
 
-// Handle Clear button click
-document.getElementById('cancel-button').addEventListener('click', function () {
-signaturePad.clear();
-});
-
-// Handle form submission
-document.getElementById('done-button').addEventListener('click', function () {
-// Get the signature data as a base64-encoded PNG image
-var signatureData = signaturePad.toDataURL();
-
-// Set the value of the hidden input to the signature data
-document.getElementById('signature-data').value = signatureData;
-
-// Navigate to Step 8
-document.getElementById('step8').style.display = 'none';
-document.getElementById('step9').style.display = 'block';
-});
-var signaturePad1 = new SignaturePad(document.getElementById('signature-canvas1'));
-
-function openSignaturePopup1() {
-document.getElementById('signature-popup1').style.display = 'block';
-}
-
-function closeSignaturePopup1() {
-document.getElementById('signature-popup1').style.display = 'none';
-}
-
-// Handle Clear button click
-document.getElementById('cancel-button1').addEventListener('click', function () {
-signaturePad.clear();
-});
-
-// Handle form submission
-document.getElementById('done-button1').addEventListener('click', function () {
-// Get the signature data as a base64-encoded PNG image
-var signatureData1 = signaturePad1.toDataURL();
-
-// Set the value of the hidden input to the signature data
-document.getElementById('signature-data1').value = signatureData1;
-
-// Navigate to Step 9
-document.getElementById('step9').style.display = 'none';
-document.getElementById('step10').style.display = 'block';
+  // Or if you want to navigate to "Step 11" without submitting the form, you can use:
+  document.getElementById('step10').style.display = 'none';
+  document.getElementById('step11').style.display = 'block';
 });

@@ -54,16 +54,16 @@
 <div class="step" id="step2" style="display: none;">
   <h3>Step 2 - Personal Information</h3>
   <label for="first_name">First Name:<span style="color: red;">*</span></label>
-  <input type="text" name="first_name"  />
+  <input type="text" name="first_name" style="width: 96%;" />
   <br />
   <label for="middle_name">Middle name</label>
-  <input type="text" name="middle_name"  />
+  <input type="text" name="middle_name" style="width: 96%;" />
   <br />
   <label for="last_name">Last Name:<span style="color: red;">*</span></label>
-  <input type="text" name="last_name"  />
+  <input type="text" name="last_name" style="width: 96%;"  />
   <br />
   <label for="dob">Date of Birth:<span style="color: red;">*</span></label>
-  <input type="date" name="dob" class="datepicker"  />
+  <input type="date" name="dob" class="datepicker"style="width: 96%;"   />
   <br />
   <button type="button" id="continue-button" class="next-step" style="width: 98%; border-radius: 8px; padding: 12px;" onclick="validateFormAndProceed()">
     Continue
@@ -77,25 +77,25 @@
       <div class="step" id="step3" style="display: none;">
         <h3>Address Information</h3>
         <label for="address_line1">Address Line 1:</label>
-        <input type="text" name="address_line1" required />
+        <input type="text" name="address_line1" required style="width: 96%;" />
         <br />
         <label for="address_line2">Address Line 2:</label>
-        <input type="text" name="address_line2" />
+        <input type="text" name="address_line2" style="width: 96%;"  />
         <br />
         <label for="city">City:</label>
-        <input type="text" name="city" required />
+        <input type="text" name="city" required style="width: 96%;" />
         <br />
         <label for="state">State:</label>
-        <input type="text" name="state" required />
+        <input type="text" name="state" required style="width: 96%;"  />
         <br />
         <label for="zip">Zip:</label>
-        <input type="text" name="zip" required />
+        <input type="text" name="zip" required style="width: 96%;"  />
         <br />
         <label for="cell_phone">Phone:</label>
-        <input type="tel" name="phone" required style="width: 100%; height: 30px;" />
+        <input type="tel" name="phone" required style="width: 97%; height: 30px;" />
         <br />
         <label for="email" style="margin-top: 15px;">Email:</label>
-        <input type="email" name="email" required style="width: 100%;  height: 30px;" />
+        <input type="email" name="email" required style="width: 97%;  height: 30px;" />
         <br />
         <button type="button" class="prev-step"
           style="width: 40px; height: 40px; background-color: #ccc; color: white; border: none; padding: 0; cursor: pointer; position: absolute; left: 20px; top: 9px;">
@@ -113,12 +113,12 @@
   <h3>Ethnicity and Race</h3>
   <div style="margin-bottom: 20px;">
     <label for="ethnicity" style="font-size: 18px; color: #555;">Ethnicity:</label>
-    <input type="text" name="Ethnicity:" />
+    <input type="text" name="Ethnicity:" style="width: 96%;" />
 
   </div>
   <div style="margin-bottom: 20px;">
     <label for="race" style="font-size: 18px; color: #555;">Race:</label>
-    <input type="text" name="Ethnicity:" />
+    <input type="text" name="Ethnicity:" style="width: 96%;"  />
 
   </div>
   <button type="button" class="prev-step"
@@ -140,25 +140,25 @@
 
   <div class="insurance-form">
     <label for="insurance-company">Insurance Company:</label>
-    <input type="text" id="insurance-company" name="insurance-company" required>
+    <input type="text" id="insurance-company" name="insurance-company" required style="width: 96%;">
 
     <label for="subscriber-id">Insurance Subscriber ID:</label>
-    <input type="text" id="subscriber-id" name="subscriber-id" required>
+    <input type="text" id="subscriber-id" name="subscriber-id" required style="width: 96%;">
 
     <label for="group-number">Insurance Group Number:</label>
-    <input type="text" id="group-number" name="group-number" required>
+    <input type="text" id="group-number" name="group-number" required style="width: 96%;">
 
     <label for="relationship">Insurance Relationship:</label>
-    <input type="text" name="Insurance Relationship" />
+    <input type="text" name="Insurance Relationship" style="width: 96%;"/>
     
     <label for="primary-first-name">Insurance Primary First Name:</label>
-    <input type="text" id="primary-first-name" name="primary-first-name" required>
+    <input type="text" id="primary-first-name" name="primary-first-name" required style="width: 96%;">
 
     <label for="primary-last-name">Insurance Primary Last Name:</label>
-    <input type="text" id="primary-last-name" name="primary-last-name" required>
+    <input type="text" id="primary-last-name" name="primary-last-name" required style="width: 96%;">
 
     <label for="primary-dob">Insurance Primary Date of Birth:</label>
-    <input type="text" id="primary-dob" name="primary-dob" placeholder="MM/DD/YYYY" required>
+    <input type="text" id="primary-dob" name="primary-dob" placeholder="MM/DD/YYYY" required style="width: 96%;">
   </div>
 
   <div class="horizontal-line"></div>
@@ -223,52 +223,57 @@
 </div>
 
 
+<!-- Step 7 - Terms & Conditions -->
+<div class="step" id="step7" style="display: none;">
+  <h3>Step 7</h3>
 
-        <!-- Step 7 - Terms & Conditions -->
-        <div class="step" id="step7" style="display: none;">
-          <h3>step 6</h3>
+  <div id="text">
+    <!-- Add your text here using <p> tags -->
+    <p style="color: #333;">If you are an uninsured patient and are applying for benefits under the State of California Medi-Cal program, please take a photo of each page of the completed application.
 
-    </head>
-    <body>
-        <div id="text">
-            <!-- Add your text here using <p> tags -->
-            <p style="color: #333;">If you are an uninsured patient and are applying for benefits under the State of California Medi-Cal program, please take a photo of each page of the completed application.
+      If you have completed the application before or have active insurance, skip this step.</p>
+  </div>
+  <div class="horizontal-line"></div>
 
-              If you have completed the application before or have active insurance, skip this step.</p>
+  <div class='wrapper'>
+    <div class="upload">
+      <div class="upload-wrapper">
+        <div class="upload-img-a-2">
+          <!-- Images will be displayed here -->
         </div>
-        <div class="horizontal-line"></div>
-        
-        <div id="document">
-            <h6>Document</h6>
-            <label for="image-input" id="image-button">
-                <img src="image/images (1).png" alt="Upload Image">
-                <!-- Hidden file input -->
-                <input type="file" id="image-input" accept="image/*" multiple />
-            </label>
-            <div id="image-container"></div>
-            <div id="loader" style="display: none;">Uploading...</div>
+        <div class="upload-info">
+          <p>
+            <span class="upload-info-value-a-2">0</span> file(s) uploaded.
+          </p>
         </div>
-
-        <div class="horizontal-line"></div>
- 
-    
-          <button type="button" class="prev-step"
-            style="width: 40px; height: 40px; background-color: #ccc; color: white; border: none; padding: 0; cursor: pointer; position: absolute; left: 20px; top: 9px;">
-            <img src="image/arrow-left.svg" alt="Left Arrow">
-          </button>
-          <button type="button" class="next-step"
-            style="width: 100px; height: 40px; background-color: #cccccc00; color: rgb(160, 158, 158); border: none; padding: 0; cursor: pointer; position: absolute; right: 20px; top: 9px; background-image: url('arrow-icon.png'); background-size: cover; background-repeat: no-repeat; background-position: center;font-weight: 800;">
-            Next
-          </button>
+        <div class="upload-area-a-2">
+          <div class="upload-area-img">
+            <img src="image/images (1).png" alt="">
+          </div>
+          <p class="upload-area-text">Select images or <span>browse</span>.</p>
         </div>
-    </form>
+        <input type="file" class="visually-hidden" id="upload-input-a-2" multiple>
+      </div>
+    </div>
   </div>
 
-  <!-- Step 8 - Agree to Terms & Conditions -->
-  <div class="step" id="step8" style="display: none;">
-    <h3>Terms of Service and Informed Consent Vital</h3>
-    <div style="text-align: left; margin-top: 20px;">
-      <h6 style="color: #333; text-align: left;">Please read and sign the consent below.</h6>
+  <div class="horizontal-line"></div>
+
+  <button type="button" class="prev-step"
+    style="width: 40px; height: 40px; background-color: #ccc; color: white; border: none; padding: 0; cursor: pointer; position: absolute; left: 20px; top: 9px;">
+    <img src="image/arrow-left.svg" alt="Left Arrow">
+  </button>
+  <button type="button" class="next-step"
+    style="width: 100px; height: 40px; background-color: #cccccc00; color: rgb(160, 158, 158); border: none; padding: 0; cursor: pointer; position: absolute; right: 20px; top: 9px; background-image: url('arrow-icon.png'); background-size: cover; background-repeat: no-repeat; background-position: center;font-weight: 800;">
+    Next
+  </button>
+</div>
+
+<!-- Step 8 - Agree to Terms & Conditions -->
+<div class="step" id="step8" style="display: none;">
+  <h3>Terms of Service and Informed Consent Vital</h3>
+  <div style="text-align: left; margin-top: 20px;">
+    <h6 style="color: #333; text-align: left;">Please read and sign the consent below.</h6>
       <p style="color: #333;">
         Terms of Service and Informed Consent<br>
 
@@ -299,32 +304,31 @@
         If I receive an abnormal result, my name and result may be disclosed to my federal, state and local health authorities in accordance with the law.<br>
         I understand and agree that the Vital Total Health Medical Group Inc Services, including any Consults, are being provided by Vital Total Health Medical Group Inc physicians using their own independent medical judgement.
       </p>
-    </div>
-    <button onclick="openSignaturePopup()"
-      style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center;">Sign</button>
+  </div>
+  <button onclick="openSignaturePopup()"
+    style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center;">Sign</button>
 
-    <!-- Hidden signature popup -->
-    <div id="signature-popup"
-      style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 999;">
-      <div
-        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; width: 80%; max-width: 400px; ">
-        <h2 style="text-align:center; color:#333">New Signature</h2>
-        <canvas id="signature-canvas" width="400" height="200"></canvas>
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
-          <button id="cancel-button" onclick="closeSignaturePopup()">Cancel</button>
-          <p>Please sign here.</p>
-          <button id="done-button">Done</button>
-        </div>
+  <!-- Hidden signature popup for Step 8 -->
+  <div id="signature-popup"
+    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 999;">
+    <div
+      style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; width: 80%; max-width: 400px;">
+      <h2 style="text-align:center; color:#333">New Signature</h2>
+      <canvas id="signature-canvas" width="400" height="200"></canvas>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+        <button id="cancel-button" onclick="closeSignaturePopup()">Cancel</button>
+        <p>Please sign here.</p>
+        <button id="done-button">Done</button>
       </div>
     </div>
-
-    <form action="registration.php" method="post">
-      <!-- Add your terms & conditions form elements here -->
-      <input type="hidden" id="signature-data" name="signature-data">
-      <input type="submit" value="Next" style="display: none;">
-    </form>
   </div>
 
+  <form action="registration.php" method="post">
+    <!-- Add your terms & conditions form elements here -->
+    <input type="hidden" id="signature-data" name="signature-data">
+    <input type="submit" value="Next" style="display: none;">
+  </form>
+</div>
 
 
 
@@ -371,14 +375,18 @@
     <h3>summary</h3>
     <p style="color: #333; text-align: center;">
       Please review the information entered before submitting. Click the arrow to go back and change any information that needs correcting.</p>
-      <button type="button" id="continue-button" class="next-step" style="width: 98%; border-radius: 8px; padding: 12px;" >
-        Submit
-      </button>
-      <button type="button" class="prev-step"
+    <button type="button" id="continue-button" class="next-step" style="width: 98%; border-radius: 8px; padding: 12px;">
+      Submit
+    </button>
+    <button type="button" class="prev-step"
       style="width: 40px; height: 40px; background-color: #ccc; color: white; border: none; padding: 0; cursor: pointer; position: absolute; left: 20px; top: 9px;">
       <img src="image/arrow-left.svg" alt="Left Arrow">
     </button>
+    <form id="step10-form" action="registration.php" method="post">
+      <!-- Add any additional form elements for Step 10 here -->
+    </form>
   </div>
+  
 
   
 <!-- Step 11 - COVID-19 Test Intro -->
@@ -411,6 +419,9 @@
   <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
   <script src="js/index.js"></script>
   <script src="js/codepen.js"></script>
+  <script src="js/step7.js"></script>
+  <script src="js/signature.js"></script>
+  <script src="js/signature1.js"></script>
 
 </body>
 
