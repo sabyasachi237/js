@@ -1,0 +1,331 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+h3 {
+  text-align: center;
+  color: white;
+  background-color: #007bff;
+  padding: 20px 0;
+  margin: 20px;
+  margin-left: -20px;
+  margin-top: -70px;
+  width: 100%;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+h2 {
+  color: #333;
+  margin-top: 0;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"],
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #0056b3;
+}
+
+.signature-pad {
+  text-align: center;
+}
+
+#signature-canvas {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#clear-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#clear-button:hover {
+  background-color: #d32f2f;
+}
+
+p {
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 20px 0;
+  /* Adjust padding as needed */
+  background-color: #007bff;
+  margin: 0;
+}
+
+.header h1 {
+  margin: 0;
+  color: white;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.container form {
+  margin-top: 20px;
+}
+/* Add your CSS styles here */
+.insurance-form {
+  background-color:white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.insurance-form label {
+  font-size: 18px;
+  color: #333;
+}
+
+.insurance-form input[type="text"],
+.insurance-form select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.insurance-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('dropdown-icon.png') no-repeat right #fff;
+  background-size: 24px;
+  background-position: 95%;
+}
+
+.insurance-form button[type="button"] {
+  width: 100px;
+  height: 40px;
+  background-color: #009688;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.insurance-form button[type="button"]:hover {
+  background-color: #007a6c;
+}
+
+.horizontal-line {
+  width: 100%;
+  border-top: 2px solid black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* Add your CSS styles here */
+#image-container-step5 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.uploaded-image-step5 {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  cursor: pointer; /* Add cursor pointer to make images clickable */
+}
+
+.horizontal-line {
+  width: 100%;
+  border-top: 2px solid black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Hide the "Choose File" input */
+#image-input-step5 {
+  display: none;
+}
+        /* Add your CSS styles here */
+        #image-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .uploaded-image {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+        }
+
+        #image-button {
+            cursor: pointer;
+        }
+
+        /* Style the hidden input to be transparent and cover the image button */
+        #image-input {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+
+        .horizontal-line {
+        width: 100%;
+        border-top: 2px solid black;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    img{
+      width: 100%;
+  }
+  .wrapper{
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary-color);
+  }
+  .upload{
+      background-color: var(--white-color);
+      border-radius: 10px;
+      width: 340px;
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+  }
+  .upload-info p{
+      opacity: 0.6;
+      font-weight: 600;
+      margin-top: 10px;
+  }
+  .upload-wrapper{
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .upload-img{
+      max-height: 300px;
+      overflow-y: scroll;
+  }
+  .upload-img::-webkit-scrollbar-track{
+      box-shadow: inset 0 0 6px var(--black-20-color);
+      border-radius: 6px;
+  }
+  .upload-img::-webkit-scrollbar-thumb{
+      background-color: var(--black-10-color);
+      border-radius: 6px;
+  }
+  .upload-img::-webkit-scrollbar{
+      width: 5px;
+  }
+  .upload-area{
+      padding: 20px;
+      border: 2px dashed var(--black-20-color);
+      border-radius: 8px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: var(--transition);
+  }
+  .upload-area:hover{
+      background-color: rgba(176, 196, 246, 0.1);
+  }
+  .upload-area-img img{
+      max-width: 80px;
+  }
+  .upload-area-text{
+      font-weight: 700;
+      color: var(--black-50-color);
+  }
+  .upload-area-text span{
+      color: var(--primary-color);
+  }
+  .visually-hidden{
+      visibility: hidden;
+      opacity: 0;
+  }
+  .upload-img{
+      width: 340px;
+  }
+  .uploaded-img{
+      padding: 4px 0;
+      position: relative;
+  }
+  
+  
+  /* remove image button */
+  .remove-btn{
+      width: 22px;
+      height: 22px;
+      background-color: white;
+      border: 1px solid var(--primary-color);
+      border-radius: 50%;
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -5px;
+      right: -8px;
+      cursor: pointer;
+      transition: var(--transition);
+  }
+  .remove-btn:hover{
+      background-color: var(--primary-color);
+      color: var(--white-color);
+  }
+  

@@ -3,129 +3,13 @@
 
 <head>
   <title>Patient Registration</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: white;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
 
-    h3 {
-      text-align: center;
-      color: white;
-      background-color: #007bff;
-      padding: 20px 0;
-      margin: 20px;
-      margin-left: -20px;
-      margin-top: -70px;
-      width: 100%;
-    }
-
-    .container {
-      background-color: white;
-      padding: 20px;
-      width: 100%;
-      margin: 20px auto;
-    }
-
-    h2 {
-      color: #333;
-      margin-top: 0;
-    }
-
-    form {
-      margin-top: 20px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 5px;
-      color: #333;
-    }
-
-    input[type="text"],
-    input[type="date"],
-    input[type="file"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    input[type="submit"],
-    button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover,
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    .signature-pad {
-      text-align: center;
-    }
-
-    #signature-canvas {
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    #clear-button {
-      background-color: #f44336;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      margin-top: 10px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    #clear-button:hover {
-      background-color: #d32f2f;
-    }
-
-    p {
-      color: white;
-    }
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 20px 20px 0;
-      /* Adjust padding as needed */
-      background-color: #007bff;
-      margin: 0;
-    }
-
-    .header h1 {
-      margin: 0;
-      color: white;
-    }
-
-    .container {
-      background-color: white;
-      padding: 20px;
-      width: 100%;
-      margin: 20px auto;
-    }
-
-    .container form {
-      margin-top: 20px;
-    }
-  </style>
-  <link rel="stylesheet" href="default.css" />
-  <link rel="stylesheet" href="default.date.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha384-Szvb3Jf4P5p3v3V81I1IOFtOMgP4v6EN4p/bf5" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/default.css" />
+  <link rel="stylesheet" href="css/default.date.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  
 </head>
 
 <body>
@@ -134,9 +18,9 @@
       <!-- Step 1 - Personal Information -->
       <div class="step" id="step1"
         style="padding: 30px; display: flex; flex-direction: column; align-items: stretch; margin: auto; max-width: 500px;">
-        <img src="VTH.jpg" alt="Logo" class="logo" style="display: block; margin: auto;">
+        <img src="image/VTH.jpg" alt="Logo" class="logo" style="display: block; margin: auto; width: 150px;">
         <h1 style="text-align: center; font-size: 24px;">COVID-19 TEST</h1>
-        <p style="color: #333;">
+        <p style="color: #333; line-height: 25px;">
           Welcome to Vital Total Health Medical Group Inc patient Collection Services. Vital Total Health Medical Group
           Inc is an independent healthcare provider network that provides medical oversight services to you for the
           laboratory testing that you requested. Each test requested is evaluated and, if appropriate, ordered by a
@@ -170,17 +54,17 @@
 <div class="step" id="step2" style="display: none;">
   <h3>Step 2 - Personal Information</h3>
   <label for="first_name">First Name:<span style="color: red;">*</span></label>
-  <input type="text" name="first_name" required />
-  <br /><br />
-  <label for="middle_name">Middle Name:<span style="color: red;">*</span></label>
-  <input type="text" name="middle_name" required />
-  <br /><br />
+  <input type="text" name="first_name"  />
+  <br />
+  <label for="middle_name">Middle name</label>
+  <input type="text" name="middle_name"  />
+  <br />
   <label for="last_name">Last Name:<span style="color: red;">*</span></label>
-  <input type="text" name="last_name" required />
-  <br /><br />
+  <input type="text" name="last_name"  />
+  <br />
   <label for="dob">Date of Birth:<span style="color: red;">*</span></label>
-  <input type="date" name="dob" class="datepicker" required />
-  <br /><br />
+  <input type="date" name="dob" class="datepicker"  />
+  <br />
   <button type="button" id="continue-button" class="next-step" style="width: 98%; border-radius: 8px; padding: 12px;" onclick="validateFormAndProceed()">
     Continue
   </button>
@@ -194,31 +78,31 @@
         <h3>Address Information</h3>
         <label for="address_line1">Address Line 1:</label>
         <input type="text" name="address_line1" required />
-        <br /><br />
+        <br />
         <label for="address_line2">Address Line 2:</label>
         <input type="text" name="address_line2" />
-        <br /><br />
+        <br />
         <label for="city">City:</label>
         <input type="text" name="city" required />
-        <br /><br />
+        <br />
         <label for="state">State:</label>
         <input type="text" name="state" required />
-        <br /><br />
+        <br />
         <label for="zip">Zip:</label>
         <input type="text" name="zip" required />
-        <br /><br />
-        <label for="cell_phone">Cell Phone:</label>
-        <input type="tel" name="cell_phone" required style="width: 100%;" />
-        <br /><br />
-        <label for="email">Email:</label>
-        <input type="email" name="email" required style="width: 100%;" />
-        <br /><br />
+        <br />
+        <label for="cell_phone">Phone:</label>
+        <input type="tel" name="phone" required style="width: 100%; height: 30px;" />
+        <br />
+        <label for="email" style="margin-top: 15px;">Email:</label>
+        <input type="email" name="email" required style="width: 100%;  height: 30px;" />
+        <br />
         <button type="button" class="prev-step"
           style="width: 40px; height: 40px; background-color: #ccc; color: white; border: none; padding: 0; cursor: pointer; position: absolute; left: 20px; top: 9px;">
-          <img src="arrow-left.svg" alt="Left Arrow">
+          <img src="image/arrow-left.svg" alt="Left Arrow">
         </button>
         <button type="button" class="next-step"
-          style="width: 100px; height: 40px; background-color: #cccccc00; color: rgb(160, 158, 158); border: none; padding: 0; cursor: pointer; position: absolute; right: 20px; top: 9px; background-image: url('arrow-icon.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+          style="width: 100px; height: 40px; background-color: #c5afaf00; color: rgb(160, 158, 158); border: none; padding: 0; cursor: pointer; position: absolute; right: 20px; top: 9px; background-image: url('arrow-icon.png'); background-size: cover; background-repeat: no-repeat; background-position: center; font-weight: 800;">
           Next
         </button>
 
@@ -229,91 +113,29 @@
   <h3>Ethnicity and Race</h3>
   <div style="margin-bottom: 20px;">
     <label for="ethnicity" style="font-size: 18px; color: #555;">Ethnicity:</label>
-    <select name="ethnicity" required style="width: 100%; padding: 10px; font-size: 16px; border: 2px solid #ccc; border-radius: 5px;">
-      <option value="">Select Ethnicity</option>
-      <option value="hispanic">Hispanic</option>
-      <option value="non_hispanic">Non-Hispanic</option>
-    </select>
+    <input type="text" name="Ethnicity:" />
+
   </div>
   <div style="margin-bottom: 20px;">
     <label for="race" style="font-size: 18px; color: #555;">Race:</label>
-    <select name="race" required style="width: 100%; padding: 10px; font-size: 16px; border: 2px solid #ccc; border-radius: 5px;">
-      <option value="">Select Race</option>
-      <option value="white">White</option>
-      <option value="black">Black</option>
-      <option value="asian">Asian</option>
-      <option value="native_american">Native American</option>
-      <option value="other">Other</option>
-    </select>
+    <input type="text" name="Ethnicity:" />
+
   </div>
   <button type="button" class="prev-step"
     style="width: 40px; height: 40px; background-color: #ccc; color: white; border: none; padding: 0; cursor: pointer; position: absolute; left: 20px; top: 9px;">
-    <img src="arrow-left.svg" alt="Left Arrow">
+    <img src="image/arrow-left.svg" alt="Left Arrow">
   </button>
   <button type="button" class="next-step"
-    style="width: 100px; height: 40px; background-color: #cccccc00; color: rgb(160, 158, 158); border: none; padding: 0; cursor: pointer; position: absolute; right: 20px; top: 9px; background-image: url('arrow-icon.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    style="width: 100px; height: 40px; background-color: #cccccc00; color: rgb(160, 158, 158); border: none; padding: 0; cursor: pointer; position: absolute; right: 20px; top: 9px; background-image: url('arrow-icon.png'); background-size: cover; background-repeat: no-repeat; background-position: center; font-weight: 800;">
     Next
   </button>
 </div>
 
-<!-- Step 7 - Insurance Information -->
+<!-- Step 5 - Insurance Information -->
 <div class="step" id="step5" style="display: none;">
   <h3>Insurance Information</h3>
   <style>
-    /* Add your CSS styles here */
-    .insurance-form {
-      background-color: #f8f8f8;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      margin-bottom: 20px;
-    }
-
-    .insurance-form label {
-      font-size: 18px;
-      color: #555;
-    }
-
-    .insurance-form input[type="text"],
-    .insurance-form select {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border: 2px solid #ccc;
-      border-radius: 5px;
-      margin-bottom: 20px;
-    }
-
-    .insurance-form select {
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      background: url('dropdown-icon.png') no-repeat right #fff;
-      background-size: 24px;
-      background-position: 95%;
-    }
-
-    .insurance-form button[type="button"] {
-      width: 100px;
-      height: 40px;
-      background-color: #009688;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 18px;
-      cursor: pointer;
-    }
-
-    .insurance-form button[type="button"]:hover {
-      background-color: #007a6c;
-    }
-
-    .horizontal-line {
-      width: 100%;
-      border-top: 2px solid black;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
+    
   </style>
 
   <div class="insurance-form">
@@ -327,13 +149,8 @@
     <input type="text" id="group-number" name="group-number" required>
 
     <label for="relationship">Insurance Relationship:</label>
-    <select id="relationship" name="relationship" required>
-      <option value="self">Self</option>
-      <option value="spouse">Spouse</option>
-      <option value="child">Child</option>
-      <option value="other">Other</option>
-    </select>
-
+    <input type="text" name="Insurance Relationship" />
+    
     <label for="primary-first-name">Insurance Primary First Name:</label>
     <input type="text" id="primary-first-name" name="primary-first-name" required>
 
@@ -348,44 +165,19 @@
 
   <button type="button" class="prev-step"
     style="width: 40px; height: 40px; background-color: #ccc; color: white; border: none; padding: 0; cursor: pointer; position: absolute; left: 20px; top: 9px;">
-    <img src="arrow-left.svg" alt="Left Arrow">
+    <img src="image/arrow-left.svg" alt="Left Arrow">
   </button>
   <button type="button" class="next-step"
-  style="width: 100px; height: 40px; background-color: #cccccc00; color: rgb(160, 158, 158); border: none; padding: 0; cursor: pointer; position: absolute; right: 20px; top: 9px; background-image: url('arrow-icon.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+  style="width: 100px; height: 40px; background-color: #cccccc00; color: rgb(160, 158, 158); border: none; padding: 0; cursor: pointer; position: absolute; right: 20px; top: 9px; background-image: url('arrow-icon.png'); background-size: cover; background-repeat: no-repeat; background-position: center; font-weight: 800;">
   Next
 </button>
 </div>
 
 
-<!-- Step 5 - Insurance Front & Back Photo -->
+<!-- Step 6 - Insurance Front & Back Photo -->
 <div class="step" id="step6" style="display: none;">
   <h3>Insurance Front & Back Photo</h3>
-  <style>
-    /* Add your CSS styles here */
-    #image-container-step5 {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .uploaded-image-step5 {
-      width: 200px;
-      height: 200px;
-      margin: 10px;
-      cursor: pointer; /* Add cursor pointer to make images clickable */
-    }
-
-    .horizontal-line {
-      width: 100%;
-      border-top: 2px solid black;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-
-    /* Hide the "Choose File" input */
-    #image-input-step5 {
-      display: none;
-    }
-  </style>
+ 
   <div id="text">
     <!-- Add your text here using <p> tags -->
     <p style="color: #333;">If you have insurance, please upload the front and back photos of your insurance card.</p>
@@ -395,104 +187,47 @@
   <div id="document">
     <h6>Document</h6>
     <!-- The camera image that triggers file selection when clicked -->
-    <label for="image-input-step5" id="image-button-step5">
-      <img src="images (1).png" alt="Upload Image">
-    </label>
-    <!-- Hidden file input -->
-    <input type="file" id="image-input-step5" accept="image/*" multiple />
-    <div id="image-container-step5"></div>
-    <div id="loader-step5" style="display: none;">Uploading...</div>
+    <div class='wrapper'>
+      <div class="upload">
+          <div class="upload-wrapper">
+              <div class="upload-img">
+                  <!-- Images will be displayed here -->
+              </div>
+              <div class="upload-info">
+                  <p>
+                      <span class="upload-info-value">0</span> file(s) uploaded.
+                  </p>
+              </div>
+              <div class="upload-area">
+                  <div class="upload-area-img">
+                      <img src="image/images (1).png" alt="">
+                  </div>
+                  <p class="upload-area-text">Select images or <span>browse</span>.</p>
+              </div>
+              <input type="file" class="visually-hidden" id="upload-input" multiple>
+          </div>
+      </div>
+  </div>
   </div>
 
   <div class="horizontal-line"></div>
 
   <button type="button" class="prev-step"
     style="width: 40px; height: 40px; background-color: #ccc; color: white; border: none; padding: 0; cursor: pointer; position: absolute; left: 20px; top: 9px;">
-    <img src="arrow-left.svg" alt="Left Arrow">
+    <img src="image/arrow-left.svg"alt="Left Arrow">
   </button>
   <button type="button" class="next-step"
-    style="width: 100px; height: 40px; background-color: #cccccc00; color: rgb(160, 158, 158); border: none; padding: 0; cursor: pointer; position: absolute; right: 20px; top: 9px; background-image: url('arrow-icon.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    style="width: 100px; height: 40px; background-color: #cccccc00; color: rgb(160, 158, 158); border: none; padding: 0; cursor: pointer; position: absolute; right: 20px; top: 9px; background-image: url('arrow-icon.png'); background-size: cover; background-repeat: no-repeat; background-position: center; font-weight: 800;">
     Next
   </button>
-  <script>
-    // Function to handle image upload and display for Step 5
-    function handleImageUploadStep5(event) {
-      const files = event.target.files;
-      const imageContainer = document.getElementById('image-container-step5');
-      const loader = document.getElementById('loader-step5');
-
-      for (const file of files) {
-        const reader = new FileReader();
-
-        reader.onload = function (e) {
-          const image = new Image();
-          image.src = e.target.result;
-          image.classList.add('uploaded-image-step5');
-          imageContainer.appendChild(image);
-          simulateUpload(loader); // Simulate the upload after adding each image
-        };
-
-        reader.readAsDataURL(file);
-      }
-    }
-
-    // Simulate an upload delay (you can replace this with actual upload code)
-    function simulateUpload(loader) {
-      loader.style.display = 'block';
-      setTimeout(() => {
-        loader.style.display = 'none';
-      }, 2000); // Change the delay as needed
-    }
-
-    // Attach the file input change event listener for Step 5
-    const fileInputStep5 = document.getElementById('image-input-step5');
-
-    fileInputStep5.addEventListener('change', function (event) {
-      handleImageUploadStep5(event);
-    });
-  </script>
 </div>
 
 
 
-        <!-- Step 6 - Terms & Conditions -->
+        <!-- Step 7 - Terms & Conditions -->
         <div class="step" id="step7" style="display: none;">
           <h3>step 6</h3>
-          <style>
-            /* Add your CSS styles here */
-            #image-container {
-                display: flex;
-                flex-wrap: wrap;
-            }
-    
-            .uploaded-image {
-                width: 200px;
-                height: 200px;
-                margin: 10px;
-            }
-    
-            #image-button {
-                cursor: pointer;
-            }
-    
-            /* Style the hidden input to be transparent and cover the image button */
-            #image-input {
-                position: absolute;
-                opacity: 0;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                cursor: pointer;
-            }
 
-            .horizontal-line {
-            width: 100%;
-            border-top: 2px solid black;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        </style>
     </head>
     <body>
         <div id="text">
@@ -506,7 +241,7 @@
         <div id="document">
             <h6>Document</h6>
             <label for="image-input" id="image-button">
-                <img src="images (1).png" alt="Upload Image">
+                <img src="image/images (1).png" alt="Upload Image">
                 <!-- Hidden file input -->
                 <input type="file" id="image-input" accept="image/*" multiple />
             </label>
@@ -519,23 +254,50 @@
     
           <button type="button" class="prev-step"
             style="width: 40px; height: 40px; background-color: #ccc; color: white; border: none; padding: 0; cursor: pointer; position: absolute; left: 20px; top: 9px;">
-            <img src="arrow-left.svg" alt="Left Arrow">
+            <img src="image/arrow-left.svg" alt="Left Arrow">
           </button>
           <button type="button" class="next-step"
-            style="width: 100px; height: 40px; background-color: #cccccc00; color: rgb(160, 158, 158); border: none; padding: 0; cursor: pointer; position: absolute; right: 20px; top: 9px; background-image: url('arrow-icon.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+            style="width: 100px; height: 40px; background-color: #cccccc00; color: rgb(160, 158, 158); border: none; padding: 0; cursor: pointer; position: absolute; right: 20px; top: 9px; background-image: url('arrow-icon.png'); background-size: cover; background-repeat: no-repeat; background-position: center;font-weight: 800;">
             Next
           </button>
         </div>
     </form>
   </div>
 
-  <!-- Step 7 - Agree to Terms & Conditions -->
+  <!-- Step 8 - Agree to Terms & Conditions -->
   <div class="step" id="step8" style="display: none;">
-    <h3>Agree to Terms & Conditions</h3>
+    <h3>Terms of Service and Informed Consent Vital</h3>
     <div style="text-align: left; margin-top: 20px;">
+      <h6 style="color: #333; text-align: left;">Please read and sign the consent below.</h6>
       <p style="color: #333;">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mauris urna. Proin aliquet nulla eu ligula
-        feugiat, ac bibendum turpis venenatis. Sed ac ligula quis arcu suscipit auctor.
+        Terms of Service and Informed Consent<br>
+
+        You have requested to participate in a testing program offered by Vital Total Health Medical Group Inc (Vital Total Health Medical Group Inc), testing for the detection of COVID-19 (“Testing”).<br>
+        
+        The Testing will have physician oversight provided by Vital Total Health Medical Group Inc Remote Care Services, Vital Total Health Medical Group Inc Medical Professional and certain other contractually affiliated professional entities and Vital Total Health Medical Group Inc(the administrative services provider of the professional entities) (collectively, “Vital Total Health Medical Group Inc”). Vital Total Health Medical Group Inc, among other things, will evaluate your request for the Testing, order the Testing (if appropriate), receive results of the Testing, notify you of positive and indeterminate Testing results and provide telehealth consults, upon request (“Consults”), (the “Vital Total Health Medical Group Inc”).<br>
+        
+        In order to participate in the Testing, You agree to be bound by the these terms and conditions and informed consent, understanding that should you choose not to accept them, You will not be able to participate in the Testing.  You acknowledge and agree to the following:<br>
+        
+        I am the individual who will provide the self-collected sample for the Testing.<br>
+        I am 18 years of age or older or a legal guardian of a minor.<br>
+        I have read and understand the information provided about the Testing.<br>
+        The information that I have provided to register for the Testing is correct and complete to the best of my knowledge.<br>
+        My Testing request will be submitted to a physician from Vital Total Health Medical Group Inc, a third-party network that is licensed in my state, to review, approve and order my Testing in accordance with state laws and regulations.  My results will be shared with Vital Total Health Medical Group Inc.<br>
+        Vital Total Health Medical Group Inc will bill my health plan, other responsible payor or the uninsured program, as applicable, based upon the information I provided, and I will not be billed for the Testing.  I understand that that I am responsible for providing accurate and complete insurance information.<br>
+        I acknowledge that the information provided by me is true to the best of my knowledge. For direct insurance billing, I hereby authorize my insurance benefits to be paid directly to Vital Total Health Medical Group Inc, Vital Total Health Medical Group Inc and its affiliated healthcare providers (the “Service Providers”), and authorize them to release medical information concerning my testing to my insurer. I authorize the Service Providers to be my Designated Representative for purposes of appealing any denial of benefits. I fully understand that I am legally responsible for sending the Service Providers any monies received from my health insurance company for the performance of any laboratory testing. If I have insurance information, I have provided this, accurately and completely and understand this information will be used to bill my insurance company for the cost associated with this COVID-19 Test.<br>
+        I am responsible for checking my email for results notification to view my Testing results, when available.<br>  
+        The Vital Total Health Medical Group Inc Privacy Notice pertaining to is available at https://www.Vital Total Health Medical Group Inc.com .<br>
+        Vital Total Health Medical Group Inc provides important information about your privacy rights and how Vital Total Health Medical Group Inc use or disclose Your Protected Health Information in a Notice of Privacy Practices, which may be found at https://www.Vital Total Health Medical Group Inc.com. By agreeing to these Terms of Service I acknowledge that I have reviewed the Vital Total Health Medical Group Inc Notice of Privacy Practices.<br>
+        While Vital Total Health Medical Group Inc implements safeguards to avoid errors, as with all laboratory tests, there is a chance of a false positive or false negative result. <br>
+        I understand that the Testing has not been cleared or approved by the U.S. Food and Drug Administration (FDA), but has been authorized by the FDA under an emergency use authorization (EUA).<br>   
+        I understand and agree that the Testing performed by Vital Total Health Medical Group Inc does not replace the interpretation of results and the care recommendations of a physician. I understand and agree that it is solely my responsibility to promptly discuss my laboratory results with a physician and that Vital Total Health Medical Group Inc recommends that I do so. The Testing results that Vital Total Health Medical Group Inc provides are not intended to diagnose or treat disease and do not constitute the practice of medicine.<br>
+        If I receive an abnormal or indeterminate Testing result, I understand that a Vital Total Health Medical Group Inc care coordinator will attempt to call me to review the results, offer education and explain the next steps I should take.  Vital Total Health Medical Group Inc care coordinator may leave me a voicemail but will not include my test results in any voicemail message. If I receive an abnormal result and have not connected with a Vital Total Health Medical Group Inc care coordinator, I understand that I should not delay following up with my personal physician. I also understand that if I am not able to be reached, the Vital Total Health Medical Group Inc Care Coordination Team will mail a follow-up letter to the residential address I provided when I requested Testing (the letter will not include my testing results). Vital Total Health Medical Group Inc may also contact me to follow up on my symptoms and experience.<br>
+        I understand that after receiving my results, I will have the opportunity for a telemedicine Consult with a Vital Total Health Medical Group Inc physician to answer any questions I may have; however, no treatment or prescriptions will be provided.<br>
+        I certify that throughout the duration of the Vital Total Health Medical Group Inc Services I receive, including my Consult, I will be physically present in the state of residence I provided or other state of which I have notified Vital Total Health Medical Group Inc.<br>
+        I am responsible for forwarding any results to my primary care or other personal physician and for initiating follow up with such physician for treatment.<br>
+        I will not make medical decisions without consulting a healthcare provider or disregard medical advice from my healthcare provider or delay seeking such advice based on information as a result of the Testing, including use of the Vital Total Health Medical Group Inc Services.<br>
+        If I receive an abnormal result, my name and result may be disclosed to my federal, state and local health authorities in accordance with the law.<br>
+        I understand and agree that the Vital Total Health Medical Group Inc Services, including any Consults, are being provided by Vital Total Health Medical Group Inc physicians using their own independent medical judgement.
       </p>
     </div>
     <button onclick="openSignaturePopup()"
@@ -545,7 +307,7 @@
     <div id="signature-popup"
       style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 999;">
       <div
-        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; width: 80%; max-width: 400px;">
+        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; width: 80%; max-width: 400px; ">
         <h2 style="text-align:center; color:#333">New Signature</h2>
         <canvas id="signature-canvas" width="400" height="200"></canvas>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
@@ -561,44 +323,13 @@
       <input type="hidden" id="signature-data" name="signature-data">
       <input type="submit" value="Next" style="display: none;">
     </form>
-
-    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
-    <script>
-      var signaturePad = new SignaturePad(document.getElementById('signature-canvas'));
-
-      function openSignaturePopup() {
-        document.getElementById('signature-popup').style.display = 'block';
-      }
-
-      function closeSignaturePopup() {
-        document.getElementById('signature-popup').style.display = 'none';
-      }
-
-      // Handle Clear button click
-      document.getElementById('cancel-button').addEventListener('click', function () {
-        signaturePad.clear();
-      });
-
-      // Handle form submission
-      document.getElementById('done-button').addEventListener('click', function () {
-        // Get the signature data as a base64-encoded PNG image
-        var signatureData = signaturePad.toDataURL();
-
-        // Set the value of the hidden input to the signature data
-        document.getElementById('signature-data').value = signatureData;
-
-        // Navigate to Step 8
-        document.getElementById('step7').style.display = 'none';
-        document.getElementById('step8').style.display = 'block';
-      });
-    </script>
   </div>
 
 
 
 
 
-  <!-- Step 8 - Additional Information -->
+  <!-- Step 9 - Additional Information -->
   <div class="step" id="step9" style="display: none;">
     <h3>Additional Information</h3>
     <div style="text-align: left; margin-top: 20px;">
@@ -607,168 +338,80 @@
         feugiat, ac bibendum turpis venenatis. Sed ac ligula quis arcu suscipit auctor.
       </p>
     </div>
-    <button onclick="openSignaturePopup()"
+    <button onclick="openSignaturePopup1()"
       style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center;">Sign</button>
 
     <!-- Hidden signature popup -->
-    <div id="signature-popup"
+    <div id="signature-popup1"
       style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 999;">
       <div
         style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; width: 80%; max-width: 400px;">
         <h2 style="text-align:center; color:#333">New Signature</h2>
-        <canvas id="signature-canvas" width="400" height="200"></canvas>
+        <canvas id="signature-canvas1" width="400" height="200"></canvas>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
-          <button id="cancel-button" onclick="closeSignaturePopup()">Cancel</button>
+          <button id="cancel-button1" onclick="closeSignaturePopup1()">Cancel</button>
           <p>Please sign here.</p>
-          <button id="done-button">Done</button>
+          <button id="done-button1">Done</button>
         </div>
       </div>
     </div>
 
     <form action="registration.php" method="post">
       <!-- Add your additional information form elements here -->
-      <input type="hidden" id="signature-data" name="signature-data">
+      <input type="hidden" id="signature-data1" name="signature-data1">
       <input type="submit" value="Next" style="display: none;">
     </form>
 
-    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
-    <script>
-      var signaturePad = new SignaturePad(document.getElementById('signature-canvas'));
-
-      function openSignaturePopup() {
-        document.getElementById('signature-popup').style.display = 'block';
-      }
-
-      function closeSignaturePopup() {
-        document.getElementById('signature-popup').style.display = 'none';
-      }
-
-      // Handle Clear button click
-      document.getElementById('cancel-button').addEventListener('click', function () {
-        signaturePad.clear();
-      });
-
-      // Handle form submission
-      document.getElementById('done-button').addEventListener('click', function () {
-        // Get the signature data as a base64-encoded PNG image
-        var signatureData = signaturePad.toDataURL();
-
-        // Set the value of the hidden input to the signature data
-        document.getElementById('signature-data').value = signatureData;
-
-        // Navigate to Step 9
-        document.getElementById('step8').style.display = 'none';
-        document.getElementById('step9').style.display = 'block';
-      });
-    </script>
   </div>
 
 
 
-  <!-- Step 9 - Registration Complete -->
+  <!-- Step 10 - Registration Complete -->
   <div class="step" id="step10" style="display: none;">
-    <h3>Registration Complete</h3>
-    <p>Thank You for registering!</p>
-    <button type="button" class="prev-step">Previous</button>
+    <h3>summary</h3>
+    <p style="color: #333; text-align: center;">
+      Please review the information entered before submitting. Click the arrow to go back and change any information that needs correcting.</p>
+      <button type="button" id="continue-button" class="next-step" style="width: 98%; border-radius: 8px; padding: 12px;" >
+        Submit
+      </button>
+      <button type="button" class="prev-step"
+      style="width: 40px; height: 40px; background-color: #ccc; color: white; border: none; padding: 0; cursor: pointer; position: absolute; left: 20px; top: 9px;">
+      <img src="image/arrow-left.svg" alt="Left Arrow">
+    </button>
   </div>
 
+  
+<!-- Step 11 - COVID-19 Test Intro -->
+<div class="step" id="step11" style="display: none;">
+  <div style="padding: 30px; display: flex; flex-direction: column; align-items: stretch; margin: auto; max-width: 500px;">
+  <img src="image/VTH.jpg" alt="Logo" class="logo" style="display: block; margin: auto;width: 150px;">
+  <p style="color: #333; text-align: left;">
+    Thank You</p>
+  <p style="color: #333; text-align: left;">
+    Your patient will have their COVID-19 test / Flu A, Flu B, Rsv, COVID-19 panel test ordered./p>
+  </div>
+
+    <button type="button" class="prev-step"
+    style="width: 40px; height: 40px; background-color: #ccc; color: white; border: none; padding: 0; cursor: pointer; position: absolute; left: 20px; top: 9px;">
+    <img src="image/arrow-left.svg" alt="Left Arrow">
+  </button>
+</div>
 
   <!-- Step Counter -->
   <div style="text-align: center;">
-    <span id="step-counter">Step 1 of 9</span>
+    <span id="step-counter">Step 1 of 11</span>
   </div>
   </form>
   </div>
 
   <!-- Your JavaScript Libraries -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="picker.js"></script>
-  <script src="picker.date.js"></script>
+  <script src="js/picker.js"></script>
+  <script src="js/picker.date.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/codepen.js"></script>
 
-  <script>
-    var currentStep = 1;
-    var totalSteps = 10;
-  
-    $(document).ready(function () {
-      $(".next-step").click(function () {
-        if (validateFields(currentStep)) {
-          if (currentStep < totalSteps) {
-            $("#step" + currentStep).hide();
-            currentStep++;
-            $("#step" + currentStep).show();
-            updateStepCounter();
-          }
-        } else {
-          // Display an error message or take other action
-          alert("Please fill out all the required fields before proceeding.");
-        }
-      });
-  
-      $(".prev-step").click(function () {
-        if (currentStep > 1) {
-          $("#step" + currentStep).hide();
-          currentStep--;
-          $("#step" + currentStep).show();
-          updateStepCounter();
-        }
-      });
-  
-      function updateStepCounter() {
-        $("#step-counter").text("Step " + currentStep + " of " + totalSteps);
-      }
-  
-      function validateFields(step) {
-        if (step === 2) {
-          // Validate fields on Step 2
-          var requiredFields = $("#step2 input[required]");
-          for (var i = 0; i < requiredFields.length; i++) {
-            if (requiredFields[i].value.trim() === "") {
-              return false;
-            }
-          }
-        }
-        // Add additional validation for other steps as needed
-        return true;
-      }
-    });
-  
-    $(".datepicker").pickadate({
-      formatSubmit: "yyyy/mm/dd",
-      hiddenName: true,
-    });
-       
-            // JavaScript to handle image upload and display
-            const imageInput = document.getElementById('image-input');
-            const imageContainer = document.getElementById('image-container');
-            const loader = document.getElementById('loader');
-    
-            imageInput.addEventListener('change', handleImageUpload);
-    
-            function handleImageUpload(event) {
-                const files = event.target.files;
-    
-                for (const file of files) {
-                    const reader = new FileReader();
-    
-                    reader.onload = function (e) {
-                        const image = new Image();
-                        image.src = e.target.result;
-                        image.classList.add('uploaded-image');
-                        imageContainer.appendChild(image);
-                    };
-    
-                    reader.readAsDataURL(file);
-                }
-    
-                // Show loader while uploading
-                loader.style.display = 'block';
-    
-                // Simulate an upload delay (you can replace this with actual upload code)
-                setTimeout(() => {
-                    loader.style.display = 'none';
-                }, 2000); // Change the delay as needed
-            }
-  </script>
 </body>
 
 </html>
