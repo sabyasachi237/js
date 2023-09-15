@@ -226,10 +226,8 @@
 
         <!-- Step 7 - Terms & Conditions -->
         <div class="step" id="step7" style="display: none;">
-          <h3>step 6</h3>
+          <h3>step 7</h3>
 
-    </head>
-    <body>
         <div id="text">
             <!-- Add your text here using <p> tags -->
             <p style="color: #333;">If you are an uninsured patient and are applying for benefits under the State of California Medi-Cal program, please take a photo of each page of the completed application.
@@ -238,16 +236,28 @@
         </div>
         <div class="horizontal-line"></div>
         
-        <div id="document">
-            <h6>Document</h6>
-            <label for="image-input" id="image-button">
-                <img src="image/images (1).png" alt="Upload Image">
-                <!-- Hidden file input -->
-                <input type="file" id="image-input" accept="image/*" multiple />
-            </label>
-            <div id="image-container"></div>
-            <div id="loader" style="display: none;">Uploading...</div>
+        <div class='wrapper'>
+          <div class="upload">
+              <div class="upload-wrapper">
+                  <div class="upload-img">
+                      <!-- Images will be displayed here -->
+                  </div>
+                  <div class="upload-info">
+                      <p>
+                          <span class="upload-info-value">0</span> file(s) uploaded.
+                      </p>
+                  </div>
+                  <div class="upload-area">
+                      <div class="upload-area-img">
+                          <img src="image/images (1).png" alt="">
+                      </div>
+                      <p class="upload-area-text">Select images or <span>browse</span>.</p>
+                  </div>
+                  <input type="file" class="visually-hidden" id="upload-input" multiple>
+              </div>
+          </div>
         </div>
+        
 
         <div class="horizontal-line"></div>
  
